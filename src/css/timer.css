@@ -1,0 +1,78 @@
+.timer-page {
+  padding: 40px 24px;
+  background-color: #fff;
+}
+
+.timer-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+#datetime-picker {
+  width: 280px;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #4e75ff;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2f42;
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#start-btn {
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: #cecece;
+  color: #979797;
+}
+
+#start-btn:not(:disabled) {
+  background-color: #4e75ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#start-btn:not(:disabled):hover {
+  background-color: #6b8cff;
+}
+
+.timer {
+  display: flex;
+  gap: 24px;
+}
+
+.timer-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2f42;
+  line-height: 1.2;
+  min-width: 55px;
+  text-align: center;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2f42;
+  text-transform: uppercase;
+}

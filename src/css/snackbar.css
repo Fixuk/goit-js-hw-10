@@ -1,0 +1,62 @@
+.snackbar-page {
+  padding: 40px 24px;
+  background-color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2f42;
+}
+
+.form input[type='number'] {
+  width: 360px;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #2e2f42;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form input[type='number']:hover {
+  border-color: #000;
+}
+
+.form input[type='number']:focus {
+  border-color: #4e75ff;
+}
+
+.form button[type='submit'] {
+  padding: 8px 16px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: fit-content;
+}
+
+.form button[type='submit']:hover {
+  background-color: #6b8cff;
+}
