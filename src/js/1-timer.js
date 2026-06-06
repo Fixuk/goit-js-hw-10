@@ -1,7 +1,10 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const startBtn = document.querySelector('[data-start]');
+const dateInput = document.querySelector('#datetime-picker');
 const daysEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
@@ -9,6 +12,8 @@ const secondsEl = document.querySelector('[data-seconds]');
 
 let userSelectedDate = null;
 let timerId = null;
+
+startBtn.disabled = true;
 
 flatpickr('#datetime-picker', {
   enableTime: true,
@@ -18,7 +23,17 @@ flatpickr('#datetime-picker', {
   onClose(selectedDates) {
     const selected = selectedDates[0];
     if (selected <= new Date()) {
-      alert('Please choose a date in the future');
+      iziToast.show({
+        icon: 'ico-error',
+        iconColor: '#fff',
+        title: 'Error',
+        titleColor: '#fff',
+        message: 'Please choose a date in the future',
+        messageColor: '#fff',
+        backgroundColor: '#ee3f3f',
+        position: 'topRight',
+        timeout: 5000,
+      });
       startBtn.disabled = true;
       return;
     }
@@ -29,7 +44,7 @@ flatpickr('#datetime-picker', {
 
 startBtn.addEventListener('click', () => {
   startBtn.disabled = true;
-  document.querySelector('#datetime-picker').disabled = true;
+  dateInput.disabled = true;
 
   timerId = setInterval(() => {
     const delta = userSelectedDate - new Date();
@@ -37,6 +52,7 @@ startBtn.addEventListener('click', () => {
     if (delta <= 0) {
       clearInterval(timerId);
       updateDisplay(0, 0, 0, 0);
+      dateInput.disabled = false;
       return;
     }
 
