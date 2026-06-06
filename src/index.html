@@ -4,20 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>goit-js-hw-10</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .links {
+        padding: 40px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .links a {
+        color: #4e75ff;
+        font-size: 18px;
+        text-decoration: none;
+      }
+      .links a:hover {
+        color: #6b8cff;
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
+    <div class="links">
+      <a href="./1-timer.html">Task 1 — Countdown Timer</a>
+      <a href="./2-snackbar.html">Task 2 — Notification Snackbar</a>
+    </div>
   </body>
 </html>

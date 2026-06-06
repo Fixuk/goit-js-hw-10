@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-#start-btn {
+[data-start] {
   height: 40px;
   padding: 8px 16px;
   border: none;
@@ -38,13 +38,13 @@
   color: #979797;
 }
 
-#start-btn:not(:disabled) {
+[data-start]:not(:disabled) {
   background-color: #4e75ff;
   color: #fff;
   cursor: pointer;
 }
 
-#start-btn:not(:disabled):hover {
+[data-start]:not(:disabled):hover {
   background-color: #6b8cff;
 }
 
