@@ -18,6 +18,10 @@ form.addEventListener('submit', evt => {
   promise
     .then(ms => {
       iziToast.show({
+        icon: 'ico-check',
+        iconColor: '#fff',
+        title: 'OK',
+        titleColor: '#fff',
         message: `Fulfilled promise in ${ms}ms`,
         messageColor: '#fff',
         backgroundColor: '#59a10d',
@@ -27,6 +31,10 @@ form.addEventListener('submit', evt => {
     })
     .catch(ms => {
       iziToast.show({
+        icon: 'ico-error',
+        iconColor: '#fff',
+        title: 'Error',
+        titleColor: '#fff',
         message: `Rejected promise in ${ms}ms`,
         messageColor: '#fff',
         backgroundColor: '#ee3f3f',

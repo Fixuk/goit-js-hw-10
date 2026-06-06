@@ -54,7 +54,7 @@
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   transition: background-color 0.2s;
-  width: fit-content;
+  width: 100%;
 }
 
 .form button[type='submit']:hover {
